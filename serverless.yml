@@ -6,6 +6,11 @@ provider:
   name: aws
   region: us-east-1
   runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action: 
+        - SNS:Publish
+      Resource: arn:aws:sns:us-east-1:450865910417:juanjoselescano-createdClient
 
 functions:
     create-client:
